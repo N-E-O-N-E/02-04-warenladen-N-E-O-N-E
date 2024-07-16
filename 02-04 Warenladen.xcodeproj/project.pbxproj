@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CEA7E22C2C415A3F0079970B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA7E22B2C415A3F0079970B /* main.swift */; };
+		FAF7E67D2C469905007EAA7A /* produkt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF7E67C2C469905007EAA7A /* produkt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		CEA7E2282C415A3F0079970B /* 02-04 Warenladen */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "02-04 Warenladen"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA7E22B2C415A3F0079970B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		FAF7E67C2C469905007EAA7A /* produkt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = produkt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				CEA7E22B2C415A3F0079970B /* main.swift */,
+				FAF7E67C2C469905007EAA7A /* produkt.swift */,
 			);
 			path = "02-04 Warenladen";
 			sourceTree = "<group>";
@@ -121,6 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEA7E22C2C415A3F0079970B /* main.swift in Sources */,
+				FAF7E67D2C469905007EAA7A /* produkt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
