@@ -96,9 +96,9 @@ func delMarkenname() {
     
     print(produktmarkenListe)
     print("Gib hier die Index-Nr deiner Marke ein, um diese aus der Liste zu löschen: ")
-    let selectedNo: Int = Int(readLine()!)!
+    let selectedNo: Int = Int(readLine()!)! - 1
     
-    if selectedNo >= 0 && selectedNo <= produktmarkenListe.count - 1 {
+    if selectedNo >= 0 && selectedNo < produktmarkenListe.count {
         
         produktmarkenListe.remove(at: selectedNo)
         
@@ -129,16 +129,6 @@ func delMarkenname() {
     print("\n")
 
 
-// begruessung()
-// ganzzahl()
-// jaOderNein()
-// jaOderNeinNeu()
-// addMarkenname()
-// delMarkenname()
-
-neuesProdukt()
-print(neueProduktliste)
-
 
 // 2.6. Closures und MAP, Filter, Rediuce
  /*
@@ -155,3 +145,16 @@ print(neueProduktliste)
   Closures erlauben eine smarte datenmanipulation
   
   */
+
+
+// begruessung()
+// ganzzahl()
+// jaOderNein()
+// jaOderNeinNeu()
+
+// addMarkenname()
+// delMarkenname()
+neuesProdukt()
+print(neueProduktliste)
+
+
