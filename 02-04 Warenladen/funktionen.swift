@@ -121,9 +121,9 @@ func qryProduktname() {
     print("Eingabe Produktname: ")
     let usereinagbe = readLine()!
     
-    //if produktBeschreibungen.keys.contains(usereinagbe)
+    if produktBeschreibungen.keys.contains(usereinagbe)
     // Nachfragen wieseo hier auf den Key und später auf den Value zugegriffen wird bei exakter Schreibweise!
-    if produktBeschreibungen[(usereinagbe)] != nil
+    //if produktBeschreibungen[(usereinagbe)] != nil
     {
         print("Beschreibung: \(produktBeschreibungen[(usereinagbe)]!)")
         
@@ -153,4 +153,61 @@ func addDictionary() {
     print(">>> \(addProduktname) wurde mit Beschreibung hinzugefügt! \n")
     print(produktBeschreibungen)
     
+}
+
+
+// Aufgabe 3.4 Einkaufwagen
+
+func einkaufswagen() {
+    
+var einkauf: Bool = true
+var warenkorb: [String:Int] = [:]
+    
+while einkauf == true {
+
+        print("""
+        
+        Treffen Sie eine Auswahl:
+        
+            1) Neues Produkt aus Liste 1 bis 10 auswählen
+            2) Warenkorb anzeigen
+            3) Beenden
+        
+        """)
+        
+    
+        let menue: Int = Int(readLine()!)!
+        
+        switch menue {
+        
+        case 1:
+            
+            print("Geben Sie die Artikelnummer ein: ")
+            let artNr: Int = Int(readLine()!)! - 1
+            
+            print("Geben Sie die Menge ein: ")
+            let menge: Int = Int(readLine()!)!
+            
+            let artikelName = neueProduktliste[artNr].produktName
+            
+            // let warenkorb: [String:Int] = [artikelName:menge]
+            warenkorb[artikelName] = menge
+            
+            print("Der Warenkorb enthält aktuell: \(warenkorb)")
+            
+        case 2:
+            print("Der Warenkorb enthält aktuell: \(warenkorb)")
+            
+        case 3:
+            print("Programm beendet")
+            einkauf = false
+        
+        default:
+            print("Programm unerwartet beendet!")
+            break
+        
+            // code
+       
+        }
+    }
 }

@@ -81,23 +81,33 @@ neueProduktliste.append(Produkt(produktName: "Kartoffeln",
 // Leeres Dictionary erstellen
 var produktBeschreibungen: [String:String] = [:]
 
-produktBeschreibungen["Schokolade"] = "Zahrbitterschokolade mit 80 % Kakao"
-produktBeschreibungen["Wasser"] = "Stilles Quellwasser auf der Region"
-produktBeschreibungen["Haferkekse"] = "Haferkekse ohne Schokolade und wenig Zucker"
-produktBeschreibungen["Salami"] = "GutBIO Rindersalami aus der Region"
-produktBeschreibungen["Mehl"] = "Type 1050 – dunkle Farbe, herber Geschmack. Gut zum Brotbacken"
+produktBeschreibungen["Schokolade"] = 
+"Zahrbitterschokolade mit 80 % Kakao"
+
+produktBeschreibungen["Wasser"] =
+"Stilles Quellwasser auf der Region"
+
+produktBeschreibungen["Haferkekse"] = 
+"Haferkekse ohne Schokolade und wenig Zucker"
+
+produktBeschreibungen["Salami"] = 
+"GutBIO Rindersalami aus der Region"
+
+produktBeschreibungen["Mehl"] = 
+"Type 1050 – dunkle Farbe, herber Geschmack. Gut zum Brotbacken"
                       
 
 
-// begruessung()
-// ganzzahl()
-// jaOderNein()
-// jaOderNeinNeu()
-// addMarkenname()
-// delMarkenname()
-// neuesProdukt()
+//begruessung()
+//ganzzahl()
+//jaOderNein()
+//jaOderNeinNeu()
+//addMarkenname()
+//delMarkenname()
+//neuesProdukt()
 //qryProduktname()
-addDictionary()
+//addDictionary()
+einkaufswagen()
 
 
 
