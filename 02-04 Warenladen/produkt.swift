@@ -44,3 +44,6 @@ func neuesProdukt() {
     neueProduktliste.append(Produkt(produktName: neu_produktName, produktPreis: neu_produktPreis, verzehrbar: neu_verzehrbar, herkunft: neu_herkunft))
     
 }
+
+
+
