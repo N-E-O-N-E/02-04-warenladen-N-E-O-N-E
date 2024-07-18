@@ -25,9 +25,8 @@ func begruessung() {
 // 1.2 Ganzzahl eingeben ---------------------------------------------------------------
 func ganzzahl() {
     
-    print("Bitte geb eine ganzzahk ein: ")
+    print("Bitte geb eine Ganzzalk ein: ")
     let ganzzahl: Int? = Int(readLine()!) ?? 0
-    
     print("Vielen Dank für die Zahl \(ganzzahl!)")
     
 }
@@ -211,3 +210,163 @@ while einkauf == true {
         }
     }
 }
+
+
+// Aufgabe 4.1. Produktmarken ausgeben --------------MINDEST--------------------------------
+func produktMarkenOutput() {
+   
+    print("Liste aller Marken")
+    print("--------------------------------------------------------")
+    
+    for (index,(marken)) in produktmarkenListe.sorted().enumerated() {
+        print("\(index+1). Marke: \(marken)")
+    }
+    print("\n")
+    
+    
+} // funktion ende
+
+// Aufgabe 4.2 Die ersten 5 Produktmarken ausgeben ------------MINDEST------------------------
+
+func produktMarkenOutput5() {
+   
+    print("Liste der ersten 5 Marken")
+    print("--------------------------------------------------------")
+    
+    for (index,(marken)) in produktmarkenListe[Range(1...5)].sorted().enumerated() {
+        print("\(index+1). Marke: \(marken)")
+    }
+    print("\n")
+    
+    
+} // funktion ende
+
+// Aufgabe 4.3 Produktliste formatiert ausgeben -----------------MINDEST----------------------
+
+func produktlisteDictOutput() {
+    
+    print("Liste Produktliste (Dict) formatiert ausgeben")
+    print("--------------------------------------------------------")
+    
+    for eintrag in neueProduktliste[Range(0...neueProduktliste.count-1)] {
+        print("Name: \(eintrag.produktName), Preis: \(eintrag.produktPreis), Herkunft: \(eintrag.herkunft), Verzehrbar: \(eintrag.verzehrbar)")
+    }
+}
+
+// Aufgabe 4.4 Range an Marken ausgeben ---------------------WEITERFÜHREND --------------------------
+
+func userEingabeGanzzahl() {
+    
+    
+while true {
+    
+        print("Bitte gib den Startwert für deine Suche ein: ")
+        let startWertSuche: Int = Int(readLine()!)!
+        print("Bitte gib den Endwert für deine Suche ein: ")
+        
+        let endOfList = neueProduktliste.count
+        let endWertSuche: Int = Int(readLine()!)!
+        
+        if endWertSuche < endOfList {
+            for eintrag in neueProduktliste[Range(startWertSuche...endWertSuche)] {
+                print("Name: \(eintrag.produktName), Preis: \(eintrag.produktPreis), Herkunft: \(eintrag.herkunft), Verzehrbar: \(eintrag.verzehrbar)")
+            }
+            print("Range: \(startWertSuche) - \(endWertSuche)")
+            break
+            
+        } else {
+            print("Error: Input > EndOfList \n")
+        }
+
+    } // end if while
+} // end of func
+
+
+
+// Aufgabe 4.5 Einkaufwagen mit Gesamtpreis ----------------- BONUS ------------------------------------------
+
+func einkaufswagenMitGesamtpreis() {
+    
+var einkauf: Bool = true
+var warenkorb: [String:Int] = [:]
+var warenwert: [Int:Double] = [:]
+var gesamtkostenWarenkorb: Double = 0
+    
+while einkauf == true {
+
+        print("""
+        ----------------------------------------------------------
+        Treffen Sie eine Auswahl:
+        
+            1) Neues Produkt hinzufügen
+            2) Warenkorb anzeigen
+            3) Warenkorbwert anzeigen
+            4) Einkauf beenden
+        
+        ----------------------------------------------------------
+        
+        """)
+        
+    
+        let menue: Int = Int(readLine()!)!
+        
+        switch menue {
+        
+        case 1:
+            
+            print("Geben Sie die Artikelnummer ein: ")
+            let artNr: Int = Int(readLine()!)! - 1
+            
+            print("Geben Sie die Menge ein: ")
+            let menge: Int = Int(readLine()!)!
+            
+            if artNr < neueProduktliste.count {
+                let artikelName = neueProduktliste[artNr].produktName
+                let artikelPreis = neueProduktliste[artNr].produktPreis
+                
+                warenkorb.updateValue(menge, forKey: artikelName)
+                //warenkorb[artikelName] = menge
+                warenwert.updateValue(artikelPreis, forKey: menge)
+                //warenwert[menge] = artikelPreis
+                
+                
+            } else {
+                print("Fehler: Artikelnummer unbekannt!")
+            }
+            
+            
+            print("Der Warenkorb enthält aktuell: \(warenkorb)")
+            
+        case 2:
+            print("Der Warenkorb enthält aktuell: \(warenkorb)")
+            
+        case 3:
+            print("-----------------------------------------------------")
+            print(" >>> Übersicht des Warenkorbwertes")
+            print("-----------------------------------------------------")
+            
+            // Als Kunde will ich den Gesammtpreis für alle Produkte in meinem Einkaufswagen angezeigt bekommen.
+            //print(warenwert)
+            
+            for (menge, preis) in warenwert {
+                gesamtkostenWarenkorb = Double(menge) * preis
+            }
+            
+            print("Der Warenkorbwert beträgt insgesamt: \(String(format: "%.2f", gesamtkostenWarenkorb)) EUR \n")
+            
+        
+        case 4:
+            print("Programm beendet")
+            einkauf = false
+        
+        default:
+            print("Programm unerwartet beendet!")
+            break
+        
+            // code
+       
+        }
+    }
+}
+
+

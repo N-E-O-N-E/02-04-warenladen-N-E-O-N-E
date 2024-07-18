@@ -107,8 +107,10 @@ produktBeschreibungen["Mehl"] =
 //neuesProdukt()
 //qryProduktname()
 //addDictionary()
-einkaufswagen()
+//einkaufswagen()
 
-
-
-
+//produktMarkenOutput()
+//produktMarkenOutput5()
+//produktlisteDictOutput()
+//userEingabeGanzzahl()
+einkaufswagenMitGesamtpreis()
