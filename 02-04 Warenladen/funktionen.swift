@@ -289,45 +289,51 @@ func einkaufswagenMitGesamtpreis() {
     
 var einkauf: Bool = true
 var warenkorb: [String:Int] = [:]
-var warenwert: [Int:Double] = [:]
+var warenwert: [Double:Int] = [:]
 var gesamtkostenWarenkorb: Double = 0
-    
+
 while einkauf == true {
 
         print("""
         ----------------------------------------------------------
         Treffen Sie eine Auswahl:
         
-            1) Neues Produkt hinzufügen
-            2) Warenkorb anzeigen
-            3) Warenkorbwert anzeigen
-            4) Einkauf beenden
+            a) Neues Produkt hinzufügen
+            b) Warenkorb anzeigen
+            c) Warenkorbwert anzeigen
+            d) Einkauf beenden
         
         ----------------------------------------------------------
         
         """)
         
     
-        let menue: Int = Int(readLine()!)!
+        let menue: String = String(readLine()!)
         
         switch menue {
         
-        case 1:
+        case "a":
             
             print("Geben Sie die Artikelnummer ein: ")
             let artNr: Int = Int(readLine()!)! - 1
             
             print("Geben Sie die Menge ein: ")
             let menge: Int = Int(readLine()!)!
+           
             
             if artNr < neueProduktliste.count {
+                
                 let artikelName = neueProduktliste[artNr].produktName
                 let artikelPreis = neueProduktliste[artNr].produktPreis
                 
+                
                 warenkorb.updateValue(menge, forKey: artikelName)
-                //warenkorb[artikelName] = menge
-                warenwert.updateValue(artikelPreis, forKey: menge)
-                //warenwert[menge] = artikelPreis
+                //warenkorb[artikelName] = addMenge
+                
+                
+                warenwert.updateValue(menge, forKey: artikelPreis)
+                //warenwert[artikelPreis] = addMenge
+                
                 
                 
             } else {
@@ -337,25 +343,28 @@ while einkauf == true {
             
             print("Der Warenkorb enthält aktuell: \(warenkorb)")
             
-        case 2:
+        case "b":
             print("Der Warenkorb enthält aktuell: \(warenkorb)")
             
-        case 3:
+        case "c":
             print("-----------------------------------------------------")
             print(" >>> Übersicht des Warenkorbwertes")
             print("-----------------------------------------------------")
             
             // Als Kunde will ich den Gesammtpreis für alle Produkte in meinem Einkaufswagen angezeigt bekommen.
-            //print(warenwert)
+            print(warenwert)
+            print(warenkorb)
             
             for (menge, preis) in warenwert {
-                gesamtkostenWarenkorb = Double(menge) * preis
+                gesamtkostenWarenkorb += Double(menge) * Double(preis)
+                
             }
             
             print("Der Warenkorbwert beträgt insgesamt: \(String(format: "%.2f", gesamtkostenWarenkorb)) EUR \n")
+            gesamtkostenWarenkorb = 0
             
         
-        case 4:
+        case "d":
             print("Programm beendet")
             einkauf = false
         
