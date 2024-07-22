@@ -30,18 +30,18 @@ func ganzzahl() {
     print("Vielen Dank für die Zahl \(ganzzahl!)")
     
 }
-   
+
 // 1.4. Ja/Nein ----------------------------------------------------------------------------
 
 func jaOderNein() {
     
     var auswahl: Bool = false
-
+    
     while auswahl == false {
         
         print("Bitte triff eine Auswahl (j/n): ")
         let eingabe: String? = readLine()!.lowercased()
-            
+        
         if eingabe == "j" {
             print("Vielen Dank für dein JA!")
             // Code
@@ -67,7 +67,7 @@ func jaOderNeinNeu() {
         
         print("Bitte triff eine Auswahl (ja/nein): ")
         let eingabe: String? = readLine()!.lowercased()
-            
+        
         if eingabe == "ja" {
             booloean = true
             print("Deine Eingabe war: \(eingabe!), Bool ist: \(booloean!)")
@@ -159,11 +159,11 @@ func addDictionary() {
 
 func einkaufswagen() {
     
-var einkauf: Bool = true
-var warenkorb: [String:Int] = [:]
+    var einkauf: Bool = true
+    var warenkorb: [String:Int] = [:]
     
-while einkauf == true {
-
+    while einkauf == true {
+        
         print("""
         
         Treffen Sie eine Auswahl:
@@ -174,11 +174,11 @@ while einkauf == true {
         
         """)
         
-    
+        
         let menue: Int = Int(readLine()!)!
         
         switch menue {
-        
+            
         case 1:
             
             print("Geben Sie die Artikelnummer ein: ")
@@ -200,13 +200,13 @@ while einkauf == true {
         case 3:
             print("Programm beendet")
             einkauf = false
-        
+            
         default:
             print("Programm unerwartet beendet!")
             break
-        
+            
             // code
-       
+            
         }
     }
 }
@@ -214,7 +214,7 @@ while einkauf == true {
 
 // Aufgabe 4.1. Produktmarken ausgeben --------------MINDEST--------------------------------
 func produktMarkenOutput() {
-   
+    
     print("Liste aller Marken")
     print("--------------------------------------------------------")
     
@@ -229,7 +229,7 @@ func produktMarkenOutput() {
 // Aufgabe 4.2 Die ersten 5 Produktmarken ausgeben ------------MINDEST------------------------
 
 func produktMarkenOutput5() {
-   
+    
     print("Liste der ersten 5 Marken")
     print("--------------------------------------------------------")
     
@@ -258,8 +258,8 @@ func produktlisteDictOutput() {
 func userEingabeGanzzahl() {
     
     
-while true {
-    
+    while true {
+        
         print("Bitte gib den Startwert für deine Suche ein: ")
         let startWertSuche: Int = Int(readLine()!)!
         print("Bitte gib den Endwert für deine Suche ein: ")
@@ -277,7 +277,7 @@ while true {
         } else {
             print("Error: Input > EndOfList \n")
         }
-
+        
     } // end if while
 } // end of func
 
@@ -287,13 +287,13 @@ while true {
 
 func einkaufswagenMitGesamtpreis() {
     
-var einkauf: Bool = true
-var warenkorb: [String:Int] = [:]
-var warenwert: [Double:Int] = [:]
-var gesamtkostenWarenkorb: Double = 0
-
-while einkauf == true {
-
+    var einkauf: Bool = true
+    var warenkorb: [String:Int] = [:]
+    var warenwert: [Double:Int] = [:]
+    var gesamtkostenWarenkorb: Double = 0
+    
+    while einkauf == true {
+        
         print("""
         ----------------------------------------------------------
         Treffen Sie eine Auswahl:
@@ -307,11 +307,11 @@ while einkauf == true {
         
         """)
         
-    
+        
         let menue: String = String(readLine()!)
         
         switch menue {
-        
+            
         case "a":
             
             print("Geben Sie die Artikelnummer ein: ")
@@ -319,7 +319,7 @@ while einkauf == true {
             
             print("Geben Sie die Menge ein: ")
             let menge: Int = Int(readLine()!)!
-           
+            
             
             if artNr < neueProduktliste.count {
                 
@@ -363,19 +363,38 @@ while einkauf == true {
             print("Der Warenkorbwert beträgt insgesamt: \(String(format: "%.2f", gesamtkostenWarenkorb)) EUR \n")
             gesamtkostenWarenkorb = 0
             
-        
+            
         case "d":
             print("Programm beendet")
             einkauf = false
-        
+            
         default:
             print("Programm unerwartet beendet!")
             break
-        
+            
             // code
-       
+            
         }
     }
+}
+
+
+// Aufgabe 4.5 Einkaufwagen mit Gesamtpreis ----------------- BONUS 2. Variante -------------
+
+
+func warenkorb() {
+    
+    let inhaltName: [String]
+    let inhaltPreis: [Int]
+    
+    for artikel in neueProduktliste {
+        print(artikel.produktName)
+    }
+    
+    
+    
+    
+    
 }
 
 

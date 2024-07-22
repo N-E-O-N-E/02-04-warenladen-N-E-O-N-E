@@ -1,7 +1,7 @@
 import Foundation
 
 // 2.1 Produktmarken ---------------------------------------------------------------------------
-var produktmarkenListe: [String] = ["Gerolsteiner", "Milka", "Ritter Sport", "Dr. Oetker", "Müller", 
+var produktmarkenListe: [String] = ["Gerolsteiner", "Milka", "Ritter Sport", "Dr. Oetker", "Müller",
                                     "Tchibo", "Hengstenberg", "Bahlsen", "Maggi", "Kühne", "Knorr",
                                     "Schwartau", "Storck", "Maoam", "Teekanne", "Meica", "Hipp",
                                     "Werther's Original", "Bitburger", "Erdinger"]
@@ -10,7 +10,7 @@ var produktmarkenListe: [String] = ["Gerolsteiner", "Milka", "Ritter Sport", "Dr
     
 var neueProduktliste: [Produkt] = []
 
-neueProduktliste.append(Produkt(produktName: "Wasser", 
+neueProduktliste.append(Produkt(produktName: "Wasser",
                                 produktPreis: 0.85,
                                 verzehrbar: true,
                                 herkunft: "Deutschland"))
@@ -20,19 +20,19 @@ neueProduktliste.append(Produkt(produktName: "Schokolade",
                                 verzehrbar: true,
                                 herkunft: "Deutschland"))
 
-neueProduktliste.append(Produkt(produktName: "Oliven", 
+neueProduktliste.append(Produkt(produktName: "Oliven",
                                 produktPreis: 2.30,
                                 verzehrbar: true,
                                 herkunft: "Türkei"))
 
-neueProduktliste.append(Produkt(produktName: "Salami", 
-                                produktPreis: 2.10, 
+neueProduktliste.append(Produkt(produktName: "Salami",
+                                produktPreis: 2.10,
                                 verzehrbar: true,
                                 herkunft: "Deutschland"))
 
 neueProduktliste.append(Produkt(produktName: "Mehl",
-                                produktPreis: 1.20, 
-                                verzehrbar: true, 
+                                produktPreis: 1.20,
+                                verzehrbar: true,
                                 herkunft: "Deutschland"))
 
 neueProduktliste.append(Produkt(produktName: "Haferkekse",
@@ -41,17 +41,17 @@ neueProduktliste.append(Produkt(produktName: "Haferkekse",
                                 herkunft: "Frankreich"))
 
 neueProduktliste.append(Produkt(produktName: "Gurke",
-                                produktPreis: 0.90, 
+                                produktPreis: 0.90,
                                 verzehrbar: true,
                                 herkunft: "Deutschland"))
 
 neueProduktliste.append(Produkt(produktName: "Honigmelone",
-                                produktPreis: 2.40, 
+                                produktPreis: 2.40,
                                 verzehrbar: true,
                                 herkunft: "Spanien"))
 
 neueProduktliste.append(Produkt(produktName: "Rinderhack",
-                                produktPreis: 3.95, 
+                                produktPreis: 3.95,
                                 verzehrbar: true,
                                 herkunft: "Deutschland"))
 
@@ -81,21 +81,21 @@ neueProduktliste.append(Produkt(produktName: "Kartoffeln",
 // Leeres Dictionary erstellen
 var produktBeschreibungen: [String:String] = [:]
 
-produktBeschreibungen["Schokolade"] = 
+produktBeschreibungen["Schokolade"] =
 "Zahrbitterschokolade mit 80 % Kakao"
 
 produktBeschreibungen["Wasser"] =
 "Stilles Quellwasser auf der Region"
 
-produktBeschreibungen["Haferkekse"] = 
+produktBeschreibungen["Haferkekse"] =
 "Haferkekse ohne Schokolade und wenig Zucker"
 
-produktBeschreibungen["Salami"] = 
+produktBeschreibungen["Salami"] =
 "GutBIO Rindersalami aus der Region"
 
-produktBeschreibungen["Mehl"] = 
+produktBeschreibungen["Mehl"] =
 "Type 1050 – dunkle Farbe, herber Geschmack. Gut zum Brotbacken"
-                      
+
 
 
 //begruessung()
@@ -113,4 +113,6 @@ produktBeschreibungen["Mehl"] =
 //produktMarkenOutput5()
 //produktlisteDictOutput()
 //userEingabeGanzzahl()
-einkaufswagenMitGesamtpreis()
+//einkaufswagenMitGesamtpreis()
+
+warenkorb()
